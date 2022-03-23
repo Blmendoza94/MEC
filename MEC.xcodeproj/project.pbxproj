@@ -10,14 +10,18 @@
 		236BB1F727EBD99200B0BE6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BB1F627EBD99200B0BE6C /* ViewController.swift */; };
 		236BB1FC27EBD99300B0BE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236BB1FB27EBD99300B0BE6C /* Assets.xcassets */; };
 		236BB20727EBDA3900B0BE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236BB20627EBDA3900B0BE6C /* AppDelegate.swift */; };
+		E123666C8C61479BB59E26B3 /* libPods-MEC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		086CDF93B4FB066067F9FE6F /* Pods-MEC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEC.release.xcconfig"; path = "Target Support Files/Pods-MEC/Pods-MEC.release.xcconfig"; sourceTree = "<group>"; };
 		236BB1EF27EBD99200B0BE6C /* MEC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236BB1F627EBD99200B0BE6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		236BB1FB27EBD99300B0BE6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236BB20027EBD99300B0BE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		236BB20627EBDA3900B0BE6C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1D0479B32BE93D0A24BE077 /* Pods-MEC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEC.debug.xcconfig"; path = "Target Support Files/Pods-MEC/Pods-MEC.debug.xcconfig"; sourceTree = "<group>"; };
+		E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MEC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E123666C8C61479BB59E26B3 /* libPods-MEC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +41,8 @@
 			children = (
 				236BB1F127EBD99200B0BE6C /* MEC */,
 				236BB1F027EBD99200B0BE6C /* Products */,
+				8A2D2AAF62A561885E9B8ECA /* Pods */,
+				E1D3CC634190630F1A0962A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,23 @@
 			path = MEC;
 			sourceTree = "<group>";
 		};
+		8A2D2AAF62A561885E9B8ECA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1D0479B32BE93D0A24BE077 /* Pods-MEC.debug.xcconfig */,
+				086CDF93B4FB066067F9FE6F /* Pods-MEC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1D3CC634190630F1A0962A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +89,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 236BB20327EBD99300B0BE6C /* Build configuration list for PBXNativeTarget "MEC" */;
 			buildPhases = (
+				F4FF4F690F4F36EE9B74CE27 /* [CP] Check Pods Manifest.lock */,
 				236BB1EB27EBD99200B0BE6C /* Sources */,
 				236BB1EC27EBD99200B0BE6C /* Frameworks */,
 				236BB1ED27EBD99200B0BE6C /* Resources */,
+				236BB20A27EBDFC100B0BE6C /* SwiftFormat */,
+				236BB20B27EBDFCA00B0BE6C /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -121,6 +148,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		236BB20A27EBDFC100B0BE6C /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\"\n";
+		};
+		236BB20B27EBDFCA00B0BE6C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" \"MEC/\"\n";
+		};
+		F4FF4F690F4F36EE9B74CE27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MEC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		236BB1EB27EBD99200B0BE6C /* Sources */ = {
@@ -253,6 +341,7 @@
 		};
 		236BB20427EBD99300B0BE6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1D0479B32BE93D0A24BE077 /* Pods-MEC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -280,6 +369,7 @@
 		};
 		236BB20527EBD99300B0BE6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 086CDF93B4FB066067F9FE6F /* Pods-MEC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

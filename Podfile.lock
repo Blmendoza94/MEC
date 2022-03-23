@@ -1,0 +1,38 @@
+PODS:
+  - Kingfisher (7.2.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SwiftFormat/CLI (0.49.6)
+  - SwiftLint (0.46.5)
+
+DEPENDENCIES:
+  - Kingfisher (~> 7.0)
+  - RxCocoa (= 6.5.0)
+  - RxSwift (= 6.5.0)
+  - SwiftFormat/CLI
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftFormat
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SwiftFormat: e40542bcf76fdaa006d0dc26a9ca8278ca028d76
+  SwiftLint: 2c16e8fa99dac2e440dc0c70ea74d2532048f6cf
+
+PODFILE CHECKSUM: 85c6fad212938e30197370fa06d0a4c40ca26407
+
+COCOAPODS: 1.11.2

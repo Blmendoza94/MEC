@@ -71,7 +71,6 @@
 				A1D0479B32BE93D0A24BE077 /* Pods-MEC.debug.xcconfig */,
 				086CDF93B4FB066067F9FE6F /* Pods-MEC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +93,8 @@
 				236BB1EB27EBD99200B0BE6C /* Sources */,
 				236BB1EC27EBD99200B0BE6C /* Frameworks */,
 				236BB1ED27EBD99200B0BE6C /* Resources */,
+				236BB20A27EBDFC100B0BE6C /* SwiftFormat */,
+				236BB20B27EBDFCA00B0BE6C /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -149,6 +150,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		236BB20A27EBDFC100B0BE6C /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\"\n";
+		};
+		236BB20B27EBDFCA00B0BE6C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" \"MEC/\"\n";
+		};
 		F4FF4F690F4F36EE9B74CE27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

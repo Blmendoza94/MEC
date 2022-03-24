@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let viewController = ViewController()
+        let viewController = SearchProductViewController()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
 

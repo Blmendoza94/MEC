@@ -65,6 +65,7 @@ class ProductListViewController: BaseViewController {
                 self?.viewDataList = viewDataList
                 self?.tableView.reloadData()
             } onError: { [weak self] _ in
+                self?.stopLoading()
                 self?.showError()
             }.disposed(by: disposeBag)
     }
@@ -79,9 +80,10 @@ class ProductListViewController: BaseViewController {
 
         let secondaryAction = UIAlertAction(
             title: ProductConstants.Error.secondaryActionTitle,
-            style: .default,
-            handler: .none
-        )
+            style: .default
+        ) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
 
         showGenericError(
             [action, secondaryAction],
@@ -95,7 +97,7 @@ class ProductListViewController: BaseViewController {
             title: ProductListConstants.EmptyError.actionTitle,
             style: .default
         ) { [weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
+            self?.navigationController?.popToRootViewController(animated: true)
         }
 
         showGenericError(

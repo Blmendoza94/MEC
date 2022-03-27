@@ -95,6 +95,12 @@
 		23A7514B27F0139300395F08 /* ProductDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7514A27F0139300395F08 /* ProductDetailConstants.swift */; };
 		23A7514D27F014DC00395F08 /* ProductListConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7514C27F014DC00395F08 /* ProductListConstants.swift */; };
 		23A7514F27F0158E00395F08 /* ProductConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7514E27F0158E00395F08 /* ProductConstants.swift */; };
+		23A7515127F017F700395F08 /* SearchCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515027F017F700395F08 /* SearchCellViewData.swift */; };
+		23A7515327F01A9300395F08 /* ProductCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515227F01A9300395F08 /* ProductCellViewData.swift */; };
+		23A7515527F01AEE00395F08 /* HeaderCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515427F01AEE00395F08 /* HeaderCellConstants.swift */; };
+		23A7515727F01D9600395F08 /* ProductCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515627F01D9600395F08 /* ProductCellConstants.swift */; };
+		23A7515927F01F1800395F08 /* SearchCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515827F01F1800395F08 /* SearchCellConstants.swift */; };
+		23BB476E27F0270C00FD7C13 /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB476D27F0270C00FD7C13 /* NetworkingConstants.swift */; };
 		E123666C8C61479BB59E26B3 /* libPods-MEC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +196,12 @@
 		23A7514A27F0139300395F08 /* ProductDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailConstants.swift; sourceTree = "<group>"; };
 		23A7514C27F014DC00395F08 /* ProductListConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConstants.swift; sourceTree = "<group>"; };
 		23A7514E27F0158E00395F08 /* ProductConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductConstants.swift; sourceTree = "<group>"; };
+		23A7515027F017F700395F08 /* SearchCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewData.swift; sourceTree = "<group>"; };
+		23A7515227F01A9300395F08 /* ProductCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewData.swift; sourceTree = "<group>"; };
+		23A7515427F01AEE00395F08 /* HeaderCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCellConstants.swift; sourceTree = "<group>"; };
+		23A7515627F01D9600395F08 /* ProductCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellConstants.swift; sourceTree = "<group>"; };
+		23A7515827F01F1800395F08 /* SearchCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellConstants.swift; sourceTree = "<group>"; };
+		23BB476D27F0270C00FD7C13 /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
 		A1D0479B32BE93D0A24BE077 /* Pods-MEC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEC.debug.xcconfig"; path = "Target Support Files/Pods-MEC/Pods-MEC.debug.xcconfig"; sourceTree = "<group>"; };
 		E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MEC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -336,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				236BB23627EBEE4500B0BE6C /* SearchCell.swift */,
+				23A7515027F017F700395F08 /* SearchCellViewData.swift */,
+				23A7515827F01F1800395F08 /* SearchCellConstants.swift */,
 			);
 			path = SearchCell;
 			sourceTree = "<group>";
@@ -486,6 +500,8 @@
 			isa = PBXGroup;
 			children = (
 				23A750E227EF891400395F08 /* ProductCell.swift */,
+				23A7515227F01A9300395F08 /* ProductCellViewData.swift */,
+				23A7515627F01D9600395F08 /* ProductCellConstants.swift */,
 			);
 			path = ProductCell;
 			sourceTree = "<group>";
@@ -554,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				23A7513527EFF83500395F08 /* HeaderCell.swift */,
+				23A7515427F01AEE00395F08 /* HeaderCellConstants.swift */,
 				23A7513927EFFCD600395F08 /* HeaderCellViewData.swift */,
 			);
 			path = HeaderCell;
@@ -564,6 +581,7 @@
 			children = (
 				23A7513D27F004A100395F08 /* BaseApiRest.swift */,
 				23A7513F27F0085B00395F08 /* ApiRest.swift */,
+				23BB476D27F0270C00FD7C13 /* NetworkingConstants.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -732,10 +750,12 @@
 				23A7513E27F004A100395F08 /* BaseApiRest.swift in Sources */,
 				236BB24627ED23BD00B0BE6C /* SearchProductCellType.swift in Sources */,
 				23A7513127EFDD1600395F08 /* ProductDetailValue.swift in Sources */,
+				23A7515927F01F1800395F08 /* SearchCellConstants.swift in Sources */,
 				23A750D627EE952900395F08 /* Filter.swift in Sources */,
 				23A750B827EE825800395F08 /* Seller.swift in Sources */,
 				236BB23B27EBEF7400B0BE6C /* PaddingTextField.swift in Sources */,
 				236BB24927ED264700B0BE6C /* PrimaryButton.swift in Sources */,
+				23A7515527F01AEE00395F08 /* HeaderCellConstants.swift in Sources */,
 				23A750E327EF891400395F08 /* ProductCell.swift in Sources */,
 				236BB21627EBE6FD00B0BE6C /* String+Extensions.swift in Sources */,
 				23A7512D27EFDD1600395F08 /* SearchLocation.swift in Sources */,
@@ -795,8 +815,10 @@
 				236BB25727EE5D5A00B0BE6C /* ProductFlowCoordinator.swift in Sources */,
 				23A750EA27EFA56300395F08 /* ProductListDelegate.swift in Sources */,
 				236BB27227EE748300B0BE6C /* ProductListRepository.swift in Sources */,
+				23A7515327F01A9300395F08 /* ProductCellViewData.swift in Sources */,
 				236BB23727EBEE4500B0BE6C /* SearchCell.swift in Sources */,
 				236BB20F27EBE6CA00B0BE6C /* BaseViewController.swift in Sources */,
+				23BB476E27F0270C00FD7C13 /* NetworkingConstants.swift in Sources */,
 				23A7512427EFDD1600395F08 /* SaleTerms.swift in Sources */,
 				23A7512727EFDD1600395F08 /* Location.swift in Sources */,
 				23A750BA27EE83E200395F08 /* Prices.swift in Sources */,
@@ -810,8 +832,10 @@
 				236BB26C27EE703D00B0BE6C /* ProductCoordinator.swift in Sources */,
 				23A7514F27F0158E00395F08 /* ProductConstants.swift in Sources */,
 				23A750C827EE8B0200395F08 /* Shipping.swift in Sources */,
+				23A7515727F01D9600395F08 /* ProductCellConstants.swift in Sources */,
 				23A7513627EFF83500395F08 /* HeaderCell.swift in Sources */,
 				23A750D227EE8F6500395F08 /* ValueStruct.swift in Sources */,
+				23A7515127F017F700395F08 /* SearchCellViewData.swift in Sources */,
 				236BB22827EBE77500B0BE6C /* SearchProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

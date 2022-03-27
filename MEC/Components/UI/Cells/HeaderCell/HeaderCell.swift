@@ -39,15 +39,20 @@ class HeaderCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             productImageView.topAnchor.constraint(
-                equalTo: contentView.topAnchor, constant: 16
+                equalTo: contentView.topAnchor,
+                constant: HeaderCellConstants.ProductImageView.topAnchor
             ),
             productImageView.leadingAnchor.constraint(
-                equalTo: contentView.leadingAnchor, constant: 40
+                equalTo: contentView.leadingAnchor,
+                constant: HeaderCellConstants.ProductImageView.leadingAnchor
             ),
             productImageView.trailingAnchor.constraint(
-                equalTo: contentView.trailingAnchor, constant: -40
+                equalTo: contentView.trailingAnchor,
+                constant: HeaderCellConstants.ProductImageView.trailingAnchor
             ),
-            productImageView.heightAnchor.constraint(equalToConstant: 250),
+            productImageView.heightAnchor.constraint(
+                equalToConstant: HeaderCellConstants.ProductImageView.heightAnchor
+            ),
         ])
     }
 
@@ -59,13 +64,16 @@ class HeaderCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(
-                equalTo: productImageView.bottomAnchor, constant: 40
+                equalTo: productImageView.bottomAnchor,
+                constant: HeaderCellConstants.NameLabel.topAnchor
             ),
             nameLabel.leadingAnchor.constraint(
-                equalTo: contentView.leadingAnchor, constant: 16
+                equalTo: contentView.leadingAnchor,
+                constant: HeaderCellConstants.NameLabel.leadingAnchor
             ),
             nameLabel.trailingAnchor.constraint(
-                equalTo: contentView.trailingAnchor, constant: -16
+                equalTo: contentView.trailingAnchor,
+                constant: HeaderCellConstants.NameLabel.trailingAnchor
             ),
         ])
     }
@@ -77,16 +85,20 @@ class HeaderCell: UITableViewCell {
 
         NSLayoutConstraint.activate([
             priceLabel.topAnchor.constraint(
-                equalTo: nameLabel.bottomAnchor, constant: 20
+                equalTo: nameLabel.bottomAnchor,
+                constant: HeaderCellConstants.Pricelabel.topAnchor
             ),
             priceLabel.leadingAnchor.constraint(
-                equalTo: contentView.leadingAnchor, constant: 16
+                equalTo: contentView.leadingAnchor,
+                constant: HeaderCellConstants.Pricelabel.leadingAnchor
             ),
             priceLabel.trailingAnchor.constraint(
-                equalTo: contentView.trailingAnchor, constant: -16
+                equalTo: contentView.trailingAnchor,
+                constant: HeaderCellConstants.Pricelabel.trailingAnchor
             ),
             priceLabel.bottomAnchor.constraint(
-                equalTo: contentView.bottomAnchor, constant: -50
+                equalTo: contentView.bottomAnchor,
+                constant: HeaderCellConstants.Pricelabel.bottomAnchor
             ),
         ])
     }

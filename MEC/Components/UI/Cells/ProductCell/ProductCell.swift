@@ -1,11 +1,5 @@
 import UIKit
 
-struct ProductCellViewData {
-    var productImageURL: URL? = URL(fileURLWithPath: .empty)
-    var productName: String = .empty
-    var productPrice: String = .empty
-}
-
 class ProductCell: UITableViewCell {
     private let productImageView = UIImageView(frame: .zero)
     private let nameLabel = UILabel(frame: .zero)
@@ -46,21 +40,21 @@ class ProductCell: UITableViewCell {
         NSLayoutConstraint.activate([
             productImageView.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: 16
+                constant: ProductCellConstants.ProductImageView.topAnchor
             ),
             productImageView.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
-                constant: 16
+                constant: ProductCellConstants.ProductImageView.leadingAnchor
             ),
             productImageView.bottomAnchor.constraint(
                 lessThanOrEqualTo: contentView.bottomAnchor,
-                constant: -32
+                constant: ProductCellConstants.ProductImageView.bottomAnchor
             ),
             productImageView.heightAnchor.constraint(
-                equalToConstant: 90
+                equalToConstant: ProductCellConstants.ProductImageView.heightAnchor
             ),
             productImageView.widthAnchor.constraint(
-                equalToConstant: 80
+                equalToConstant: ProductCellConstants.ProductImageView.widthAnchor
             ),
         ])
     }
@@ -75,11 +69,11 @@ class ProductCell: UITableViewCell {
             nameLabel.topAnchor.constraint(equalTo: productImageView.topAnchor),
             nameLabel.leadingAnchor.constraint(
                 equalTo: productImageView.trailingAnchor,
-                constant: 32
+                constant: ProductCellConstants.NameLabel.leadingAnchor
             ),
             nameLabel.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
-                constant: -16
+                constant: ProductCellConstants.NameLabel.trailingAnchor
             ),
         ])
     }
@@ -92,16 +86,16 @@ class ProductCell: UITableViewCell {
         NSLayoutConstraint.activate([
             priceLabel.topAnchor.constraint(
                 equalTo: nameLabel.bottomAnchor,
-                constant: 16
+                constant: ProductCellConstants.PriceLabel.topAnchor
             ),
             priceLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             priceLabel.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
-                constant: -16
+                constant: ProductCellConstants.PriceLabel.trailingAnchor
             ),
             priceLabel.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -32
+                constant: ProductCellConstants.PriceLabel.bottomAnchor
             ),
         ])
     }

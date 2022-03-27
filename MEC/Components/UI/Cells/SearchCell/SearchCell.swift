@@ -10,6 +10,13 @@ class SearchCell: UITableViewCell {
 
     weak var delegate: SearchCellDelegate?
 
+    var viewData: SearchCellViewData? {
+        didSet {
+            searchTextField.placeholder = viewData?.placeHolder
+            searchButton.setTitle(viewData?.buttonTitle ?? .empty, for: .normal)
+        }
+    }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         prepare()
@@ -28,27 +35,28 @@ class SearchCell: UITableViewCell {
     private func prepareSearchTextField() {
         contentView.addAutoLayout(searchTextField)
 
-        searchTextField.layer.borderWidth = 1
-        searchTextField.layer.cornerRadius = 4
+        searchTextField.layer.borderWidth = SearchCellConstants
+            .SearchTextField.borderWidth
+        searchTextField.layer.cornerRadius = SearchCellConstants
+            .SearchTextField.cornerRadius
         searchTextField.layer.borderColor = UIColor.gray.cgColor
-        searchTextField.placeholder = "Buscar productos, marcas y más..."
         searchTextField.delegate = self
 
         NSLayoutConstraint.activate([
             searchTextField.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: 16
+                constant: SearchCellConstants.SearchTextField.topAnchor
             ),
             searchTextField.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
-                constant: 16
+                constant: SearchCellConstants.SearchTextField.leadingAnchor
             ),
             searchTextField.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
-                constant: -16
+                constant: SearchCellConstants.SearchTextField.trailingAnchor
             ),
             searchTextField.heightAnchor.constraint(
-                equalToConstant: 50
+                equalToConstant: SearchCellConstants.SearchTextField.heightAnchor
             ),
         ])
     }
@@ -57,9 +65,9 @@ class SearchCell: UITableViewCell {
         contentView.addAutoLayout(searchButton)
 
         searchButton.backgroundColor = .baseBlue
-        searchButton.layer.cornerRadius = 4
+        searchButton.layer.cornerRadius = SearchCellConstants
+            .SearchButton.cornerRadius
         searchButton.setTitleColor(.white, for: .normal)
-        searchButton.setTitle("Ir a buscar", for: .normal)
         searchButton.isEnabled = false
         searchButton.addTarget(
             self,
@@ -70,22 +78,22 @@ class SearchCell: UITableViewCell {
         NSLayoutConstraint.activate([
             searchButton.topAnchor.constraint(
                 equalTo: searchTextField.bottomAnchor,
-                constant: 16
+                constant: SearchCellConstants.SearchButton.topAnchor
             ),
             searchButton.leadingAnchor.constraint(
                 equalTo: searchTextField.leadingAnchor,
-                constant: 32
+                constant: SearchCellConstants.SearchButton.leadingAnchor
             ),
             searchButton.trailingAnchor.constraint(
                 equalTo: searchTextField.trailingAnchor,
-                constant: -32
+                constant: SearchCellConstants.SearchButton.trailingAnchor
             ),
             searchButton.heightAnchor.constraint(
-                equalToConstant: 45
+                equalToConstant: SearchCellConstants.SearchButton.heightAnchor
             ),
             searchButton.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -16
+                constant: SearchCellConstants.SearchButton.bottomAnchor
             ),
         ])
     }

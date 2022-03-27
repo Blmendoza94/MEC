@@ -4,7 +4,7 @@ struct ReferencePrice: Codable {
     let referencePriceId: String?
     let type: String?
     let conditions: Condition?
-    let amount: Int?
+    let amount: Decimal?
     let currencyId: String?
     let exchangeRateContext: String?
     let tags: [String?]?

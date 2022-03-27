@@ -1,11 +1,19 @@
+import CloudKit
 import Foundation
 import RxSwift
 
-class BaseApiRest<T: Codable>: ApiRest {
-    func fetch(_ url: URL) -> Observable<T> {
+class BaseApiRest<O: Codable>: ApiRest {
+    func get(_ url: URL) -> Observable<O> {
+        var request = URLRequest(url: url)
+
+        request.httpMethod = NetworkingConstants.Method.get
+
+        return execute(request)
+    }
+
+    private func execute(_ request: URLRequest) -> Observable<O> {
         return Observable.create { observer in
             let session = URLSession.shared
-            let request = URLRequest(url: url)
 
             session.dataTask(with: request) { data, _, error in
 
@@ -16,7 +24,7 @@ class BaseApiRest<T: Codable>: ApiRest {
 
                 do {
                     let decoder = JSONDecoder()
-                    let detailList = try decoder.decode(T.self, from: data)
+                    let detailList = try decoder.decode(O.self, from: data)
                     observer.onNext(detailList)
                 } catch {
                     observer.onError(error)

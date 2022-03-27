@@ -2,11 +2,16 @@ import RxSwift
 
 class ProductDetailRestApi: BaseApiRest<[ProductDetail]>, ProductDetailRepository {
     func getProductDetail(_ productId: String) -> Observable<[ProductDetail]> {
-        let urlString = "https://api.mercadolibre.com/items?ids=\(productId)"
-        return fetch(
-            URL(
-                string: urlString
-            ) ?? URL(fileURLWithPath: .empty)
-        )
+        let stringURL = NetworkingConstants.Endpoint.baseDomain
+            + NetworkingConstants.Subdomain.items
+
+        let queryItems = [
+            URLQueryItem(name: NetworkingConstants.Fields.filterIds, value: productId),
+        ]
+
+        var urlComponents = URLComponents(string: stringURL) ?? URLComponents()
+        urlComponents.queryItems = queryItems
+
+        return get(urlComponents.url ?? URL(fileURLWithPath: .empty))
     }
 }

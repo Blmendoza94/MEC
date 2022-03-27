@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 
 protocol ApiRest: AnyObject {
-    associatedtype GenericType
+    associatedtype GenericOutput
 
-    func fetch(_ url: URL) -> GenericType
+    func get(_ url: URL) -> GenericOutput
 }

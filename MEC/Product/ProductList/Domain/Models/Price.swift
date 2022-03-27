@@ -3,8 +3,8 @@ import Foundation
 struct Price: Codable {
     let priceId: String?
     let type: String?
-    let amount: Int?
-    let regularAmount: Int?
+    let amount: Decimal?
+    let regularAmount: Decimal?
     let currencyId: String?
     let lastUpdated: String?
     let conditions: Condition?

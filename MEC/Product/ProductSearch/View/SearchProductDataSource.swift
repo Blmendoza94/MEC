@@ -12,10 +12,17 @@ class SearchProductDataSource: NSObject {
         _ tableView: UITableView,
         indexPath: IndexPath
     ) -> UITableViewCell {
-        return tableView.dequeueReusableCell(
+        let cell = tableView.dequeueReusableCell(
             with: SearchCell.self,
             for: indexPath
         )
+
+        cell.viewData = SearchCellViewData(
+            placeHolder: ProductSearchConstants.SearchCell.placeholder,
+            buttonTitle: ProductSearchConstants.SearchCell.buttonTitle
+        )
+
+        return cell
     }
 }
 

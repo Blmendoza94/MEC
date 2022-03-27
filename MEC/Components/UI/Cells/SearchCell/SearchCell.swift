@@ -7,7 +7,7 @@ protocol SearchCellDelegate: AnyObject {
 class SearchCell: UITableViewCell {
     private let searchTextField = PaddingTextField(frame: .zero)
     private let searchButton = PrimaryButton(frame: .zero)
-    
+
     weak var delegate: SearchCellDelegate?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -26,20 +26,18 @@ class SearchCell: UITableViewCell {
     }
 
     private func prepareSearchTextField() {
-        contentView.addAutoLayout(subview: searchTextField)
+        contentView.addAutoLayout(searchTextField)
 
         searchTextField.layer.borderWidth = 1
         searchTextField.layer.cornerRadius = 4
         searchTextField.layer.borderColor = UIColor.gray.cgColor
-        searchTextField.placeholder = "Buscar..."
+        searchTextField.placeholder = "Buscar productos, marcas y más..."
         searchTextField.delegate = self
 
         NSLayoutConstraint.activate([
-            searchTextField.centerXAnchor.constraint(
-                equalTo: contentView.centerXAnchor
-            ),
-            searchTextField.centerYAnchor.constraint(
-                equalTo: contentView.centerYAnchor
+            searchTextField.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: 16
             ),
             searchTextField.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
@@ -56,13 +54,18 @@ class SearchCell: UITableViewCell {
     }
 
     private func prepareSearchButton() {
-        contentView.addAutoLayout(subview: searchButton)
+        contentView.addAutoLayout(searchButton)
 
         searchButton.backgroundColor = .baseBlue
         searchButton.layer.cornerRadius = 4
         searchButton.setTitleColor(.white, for: .normal)
         searchButton.setTitle("Ir a buscar", for: .normal)
         searchButton.isEnabled = false
+        searchButton.addTarget(
+            self,
+            action: #selector(searchButtonTapped),
+            for: .touchUpInside
+        )
 
         NSLayoutConstraint.activate([
             searchButton.topAnchor.constraint(
@@ -80,7 +83,15 @@ class SearchCell: UITableViewCell {
             searchButton.heightAnchor.constraint(
                 equalToConstant: 45
             ),
+            searchButton.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: -16
+            ),
         ])
+    }
+
+    @objc private func searchButtonTapped() {
+        delegate?.searchItem(searchTextField.text ?? .empty)
     }
 }
 
@@ -95,7 +106,6 @@ extension SearchCell: UITextFieldDelegate {
             return
         }
         searchButton.isEnabled = true
-        delegate?.searchItem(textField.text ?? .empty)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

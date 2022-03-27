@@ -12,32 +12,31 @@ class ProductFlowCoordinator {
 
 extension ProductFlowCoordinator: ProductCoordinator {
     func show() {
-        let searchProductViewController = SearchProductViewController()
         let viewModel = SearchProductViewModel()
 
         viewModel.coordinator = self
-        searchProductViewController.viewModel = viewModel
+        let searchProductViewController = SearchProductViewController(viewModel: viewModel)
 
         navigationController.pushViewController(searchProductViewController, animated: true)
     }
 
     func goToProductList(_ searchText: String) {
-        let productListViewController = ProductListViewController()
         let viewModel = ProductListViewModel()
 
         viewModel.coordinator = self
+
+        let productListViewController = ProductListViewController(viewModel: viewModel)
         productListViewController.searchText = searchText
-        productListViewController.viewModel = viewModel
 
         navigationController.pushViewController(productListViewController, animated: true)
     }
 
     func goToProductDetail(_ productId: String) {
-        let productDetailViewController = ProductDetailViewController()
         let viewModel = ProductDetailViewModel()
 
         viewModel.coordinator = self
-        productDetailViewController.viewModel = viewModel
+
+        let productDetailViewController = ProductDetailViewController(viewModel: viewModel)
         productDetailViewController.productId = productId
 
         navigationController.pushViewController(productDetailViewController, animated: true)

@@ -6,9 +6,16 @@ class ProductDetailViewController: BaseViewController, ProductDetailView {
     private let dataSource = ProductDetailDataSource()
     private let disposeBag = DisposeBag()
 
+    private var productDetailViewModel: ProductDetailViewModelProtocol? {
+        return viewModel as? ProductDetailViewModelProtocol
+    }
+
     var productId: String?
     var viewData: ProductDetailViewData?
-    var viewModel: ProductDetailViewModelProtocol?
+
+    convenience init(viewModel: ProductDetailViewModelProtocol?) {
+        self.init(viewModel)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +33,7 @@ class ProductDetailViewController: BaseViewController, ProductDetailView {
     }
 
     private func getProductDetail() {
-        guard let viewModel = viewModel else {
+        guard let viewModel = productDetailViewModel else {
             return
         }
 

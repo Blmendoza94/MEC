@@ -7,16 +7,22 @@ class ProductListViewController: BaseViewController {
     private let delegate = ProductListDelegate()
     private let disposeBag = DisposeBag()
 
+    private var productListViewModel: ProductListViewModelProtocol? {
+        return viewModel as? ProductListViewModelProtocol
+    }
+
     var searchText: String?
-    var viewModel: ProductListViewModelProtocol?
     var viewDataList: [ProductViewData]?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    convenience init(viewModel: ProductListViewModelProtocol) {
+        self.init(viewModel)
 
         dataSource.attach(self)
         delegate.attach(self)
+    }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
         prepare()
         getProductList()
     }
@@ -47,7 +53,7 @@ class ProductListViewController: BaseViewController {
     }
 
     private func getProductList() {
-        guard let viewModel = viewModel else {
+        guard let viewModel = productListViewModel else {
             return
         }
 
@@ -110,6 +116,6 @@ class ProductListViewController: BaseViewController {
 
 extension ProductListViewController: ProductListView {
     func showProductDetail(_ productId: String) {
-        viewModel?.showProductDetail(productId)
+        productListViewModel?.showProductDetail(productId)
     }
 }

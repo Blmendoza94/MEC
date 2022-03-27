@@ -9,6 +9,13 @@ class BaseViewController: UIViewController {
         }
     }
 
+    var viewModel: ViewModel?
+
+    convenience init(_ viewModel: ViewModel?) {
+        self.init()
+        self.viewModel = viewModel
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

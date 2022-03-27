@@ -6,7 +6,7 @@ struct Seller: Codable {
     let registrationDate: String?
     let carDealer: Bool?
     let realEstateAgency: Bool?
-    let tags: String?
+    let tags: [String]?
 
     enum CodingKeys: String, CodingKey {
         case sellerId = "id"

@@ -101,6 +101,7 @@
 		23A7515727F01D9600395F08 /* ProductCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515627F01D9600395F08 /* ProductCellConstants.swift */; };
 		23A7515927F01F1800395F08 /* SearchCellConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7515827F01F1800395F08 /* SearchCellConstants.swift */; };
 		23BB476E27F0270C00FD7C13 /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BB476D27F0270C00FD7C13 /* NetworkingConstants.swift */; };
+		23F88CE427F042630080DD32 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F88CE327F042630080DD32 /* ViewModel.swift */; };
 		E123666C8C61479BB59E26B3 /* libPods-MEC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +203,7 @@
 		23A7515627F01D9600395F08 /* ProductCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellConstants.swift; sourceTree = "<group>"; };
 		23A7515827F01F1800395F08 /* SearchCellConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellConstants.swift; sourceTree = "<group>"; };
 		23BB476D27F0270C00FD7C13 /* NetworkingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
+		23F88CE327F042630080DD32 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A1D0479B32BE93D0A24BE077 /* Pods-MEC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MEC.debug.xcconfig"; path = "Target Support Files/Pods-MEC/Pods-MEC.debug.xcconfig"; sourceTree = "<group>"; };
 		E129ABB8FD002F1559FFEA4F /* libPods-MEC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MEC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -383,6 +385,7 @@
 			children = (
 				236BB20E27EBE6CA00B0BE6C /* BaseViewController.swift */,
 				236BB25027EE41E400B0BE6C /* BaseView.swift */,
+				23F88CE327F042630080DD32 /* ViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				23A7515927F01F1800395F08 /* SearchCellConstants.swift in Sources */,
 				23A750D627EE952900395F08 /* Filter.swift in Sources */,
 				23A750B827EE825800395F08 /* Seller.swift in Sources */,
+				23F88CE427F042630080DD32 /* ViewModel.swift in Sources */,
 				236BB23B27EBEF7400B0BE6C /* PaddingTextField.swift in Sources */,
 				236BB24927ED264700B0BE6C /* PrimaryButton.swift in Sources */,
 				23A7515527F01AEE00395F08 /* HeaderCellConstants.swift in Sources */,

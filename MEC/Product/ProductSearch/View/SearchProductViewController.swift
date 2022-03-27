@@ -6,7 +6,13 @@ class SearchProductViewController: BaseViewController {
     private let dataSource = SearchProductDataSource()
     private let delegate = SearchProductDelegate()
 
-    var viewModel: SearchProductViewModelProtocol?
+    private var searchProductViewModel: SearchProductViewModelProtocol? {
+        return viewModel as? SearchProductViewModelProtocol
+    }
+
+    convenience init(viewModel: SearchProductViewModel) {
+        self.init(viewModel)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +51,6 @@ class SearchProductViewController: BaseViewController {
 
 extension SearchProductViewController: SearchProductView {
     func showProductList(_ searchText: String) {
-        viewModel?.showProductSearch(searchText)
+        searchProductViewModel?.showProductSearch(searchText)
     }
 }

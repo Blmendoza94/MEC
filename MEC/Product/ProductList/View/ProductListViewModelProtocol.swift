@@ -1,6 +1,6 @@
 import RxSwift
 
-protocol ProductListViewModelProtocol: AnyObject {
+protocol ProductListViewModelProtocol: ViewModel {
     var coordinator: ProductCoordinator? { get set }
 
     func getProductList(_ searchText: String) -> Observable<[ProductViewData]?>

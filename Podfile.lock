@@ -10,9 +10,9 @@ PODS:
   - SwiftLint (0.46.5)
 
 DEPENDENCIES:
-  - Kingfisher (~> 7.0)
-  - RxCocoa (= 6.5.0)
-  - RxSwift (= 6.5.0)
+  - Kingfisher
+  - RxCocoa
+  - RxSwift
   - SwiftFormat/CLI
   - SwiftLint
 
@@ -33,6 +33,6 @@ SPEC CHECKSUMS:
   SwiftFormat: e40542bcf76fdaa006d0dc26a9ca8278ca028d76
   SwiftLint: 2c16e8fa99dac2e440dc0c70ea74d2532048f6cf
 
-PODFILE CHECKSUM: 85c6fad212938e30197370fa06d0a4c40ca26407
+PODFILE CHECKSUM: c9f4343e95e2886ac89c16492c43d4b082f08f7f
 
 COCOAPODS: 1.11.2

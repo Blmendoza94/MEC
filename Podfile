@@ -1,9 +1,19 @@
 platform :ios, '15.0'
 
-target 'MEC' do
+def common_pods
+  use_frameworks!
+
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'
+end
+
+target 'MEC' do
+  common_pods
+end
+
+target "MECTests" do
+  common_pods
 end

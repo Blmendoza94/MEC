@@ -1,16 +1,16 @@
 import UIKit
 
-class SearchProductViewController: BaseViewController {
+class ProductSearchViewController: BaseViewController {
     private let tableView = UITableView(frame: .zero)
 
-    private let dataSource = SearchProductDataSource()
-    private let delegate = SearchProductDelegate()
+    private let dataSource = ProductSearchDataSource()
+    private let delegate = ProductSearchDelegate()
 
-    private var searchProductViewModel: SearchProductViewModelProtocol? {
-        return viewModel as? SearchProductViewModelProtocol
+    private var searchProductViewModel: ProductSearchViewModelProtocol? {
+        return viewModel as? ProductSearchViewModelProtocol
     }
 
-    convenience init(viewModel: SearchProductViewModel) {
+    convenience init(viewModel: ProductSearchViewModel) {
         self.init(viewModel)
     }
 
@@ -49,7 +49,7 @@ class SearchProductViewController: BaseViewController {
     }
 }
 
-extension SearchProductViewController: SearchProductView {
+extension ProductSearchViewController: ProductSearchView {
     func showProductList(_ searchText: String) {
         searchProductViewModel?.showProductSearch(searchText)
     }

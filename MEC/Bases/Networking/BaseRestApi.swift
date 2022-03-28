@@ -1,20 +1,17 @@
 import Foundation
 import RxSwift
 
-class BaseApiRest<O: Codable>: ApiRest {
-    func get(_ url: URL) -> Observable<O> {
-        var request = URLRequest(url: url)
+class BaseRestApi<O: Codable>: RestApi {
+    private var session: NetworkSession
 
-        request.httpMethod = NetworkingConstants.Method.get
-
-        return execute(request)
+    init(session: NetworkSession = URLSession.shared) {
+        self.session = session
     }
 
-    private func execute(_ request: URLRequest) -> Observable<O> {
-        return Observable.create { observer in
-            let session = URLSession.shared
+    func execute(_ request: URLRequest) -> Observable<O> {
+        return Observable.create { [weak self] observer in
 
-            session.dataTask(with: request) { data, _, error in
+            self?.session.loadData(with: request) { data, _, error in
 
                 guard let data = data, error == nil else {
                     observer.onError(error.unsafelyUnwrapped)
@@ -28,10 +25,10 @@ class BaseApiRest<O: Codable>: ApiRest {
                 } catch {
                     observer.onError(error)
                 }
-            }.resume()
+            }
 
             return Disposables.create {
-                session.finishTasksAndInvalidate()
+                self?.session.finishTasksAndInvalidate()
             }
         }
     }

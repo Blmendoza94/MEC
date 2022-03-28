@@ -1,0 +1,307 @@
+[
+    {
+        "code": 200,
+        "body": {
+            "id": "MLC642385424",
+            "site_id": "MLC",
+            "title": "Mac Cosmetics  Labial Matte Diva",
+            "subtitle": null,
+            "seller_id": 637006822,
+            "category_id": "MLC180915",
+            "official_store_id": null,
+            "price": 11900,
+            "base_price": 11900,
+            "original_price": null,
+            "currency_id": "CLP",
+            "initial_quantity": 47,
+            "available_quantity": 1,
+            "sold_quantity": 25,
+            "sale_terms": [
+                {
+                    "id": "WARRANTY_TYPE",
+                    "name": "Tipo de garantía",
+                    "value_id": "2230280",
+                    "value_name": "Garantía del vendedor",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "2230280",
+                            "name": "Garantía del vendedor",
+                            "struct": null
+                        }
+                    ]
+                },
+                {
+                    "id": "WARRANTY_TIME",
+                    "name": "Tiempo de garantía",
+                    "value_id": null,
+                    "value_name": "1 meses",
+                    "value_struct": {
+                        "number": 1,
+                        "unit": "meses"
+                    },
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "1 meses",
+                            "struct": {
+                                "number": 1,
+                                "unit": "meses"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "buying_mode": "buy_it_now",
+            "listing_type_id": "gold_pro",
+            "start_time": "2021-08-24T20:30:43.000Z",
+            "stop_time": "2041-08-19T04:00:00.000Z",
+            "condition": "new",
+            "permalink": "https://articulo.mercadolibre.cl/MLC-642385424-mac-cosmetics-labial-matte-diva-_JM",
+            "thumbnail_id": "859022-MLC47220873637_082021",
+            "thumbnail": "http://http2.mlstatic.com/D_859022-MLC47220873637_082021-I.jpg",
+            "secure_thumbnail": "https://http2.mlstatic.com/D_859022-MLC47220873637_082021-I.jpg",
+            "pictures": [
+                {
+                    "id": "859022-MLC47220873637_082021",
+                    "url": "http://http2.mlstatic.com/D_859022-MLC47220873637_082021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_859022-MLC47220873637_082021-O.jpg",
+                    "size": "237x500",
+                    "max_size": "588x1236",
+                    "quality": ""
+                },
+                {
+                    "id": "956448-MLC47220979231_082021",
+                    "url": "http://http2.mlstatic.com/D_956448-MLC47220979231_082021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_956448-MLC47220979231_082021-O.jpg",
+                    "size": "500x500",
+                    "max_size": "1200x1200",
+                    "quality": ""
+                },
+                {
+                    "id": "760887-MLC47220846760_082021",
+                    "url": "http://http2.mlstatic.com/D_760887-MLC47220846760_082021-O.jpg",
+                    "secure_url": "https://http2.mlstatic.com/D_760887-MLC47220846760_082021-O.jpg",
+                    "size": "500x206",
+                    "max_size": "1160x480",
+                    "quality": ""
+                }
+            ],
+            "video_id": null,
+            "descriptions": [],
+            "accepts_mercadopago": true,
+            "non_mercado_pago_payment_methods": [],
+            "shipping": {
+                "mode": "me2",
+                "methods": [],
+                "tags": [
+                    "self_service_in"
+                ],
+                "dimensions": null,
+                "local_pick_up": false,
+                "free_shipping": false,
+                "logistic_type": "xd_drop_off",
+                "store_pick_up": false
+            },
+            "international_delivery_mode": "none",
+            "seller_address": {
+                "city": {
+                    "id": "TUxDQ9FV0WU0MmM2",
+                    "name": "Ñuñoa"
+                },
+                "state": {
+                    "id": "CL-RM",
+                    "name": "RM (Metropolitana)"
+                },
+                "country": {
+                    "id": "CL",
+                    "name": "Chile"
+                },
+                "search_location": {
+                    "city": {
+                        "id": "TUxDQ9FV0WU0MmM2",
+                        "name": "Ñuñoa"
+                    },
+                    "state": {
+                        "id": "TUxDUE1FVEExM2JlYg",
+                        "name": "RM (Metropolitana)"
+                    }
+                },
+                "id": 1184456654
+            },
+            "seller_contact": null,
+            "location": {},
+            "coverage_areas": [],
+            "attributes": [
+                {
+                    "id": "BRAND",
+                    "name": "Marca",
+                    "value_id": "428791",
+                    "value_name": "MAC",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "428791",
+                            "name": "MAC",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "GTIN",
+                    "name": "Código universal de producto",
+                    "value_id": null,
+                    "value_name": "773602048670",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "773602048670",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "IS_LONG_LASTING",
+                    "name": "Es de larga duración",
+                    "value_id": "242085",
+                    "value_name": "Sí",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "242085",
+                            "name": "Sí",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "ITEM_CONDITION",
+                    "name": "Condición del ítem",
+                    "value_id": "2230284",
+                    "value_name": "Nuevo",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "2230284",
+                            "name": "Nuevo",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "LINE",
+                    "name": "Línea",
+                    "value_id": null,
+                    "value_name": "MATTE",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "MATTE",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "MODEL",
+                    "name": "Modelo",
+                    "value_id": null,
+                    "value_name": "DIVA",
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": null,
+                            "name": "DIVA",
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                },
+                {
+                    "id": "UNITS_PER_PACKAGE",
+                    "name": "Unidades por envase",
+                    "value_id": "-1",
+                    "value_name": null,
+                    "value_struct": null,
+                    "values": [
+                        {
+                            "id": "-1",
+                            "name": null,
+                            "struct": null
+                        }
+                    ],
+                    "attribute_group_id": "OTHERS",
+                    "attribute_group_name": "Otros"
+                }
+            ],
+            "warnings": [],
+            "listing_source": "",
+            "variations": [
+                {
+                    "id": 95394889837,
+                    "price": 11900,
+                    "attribute_combinations": [
+                        {
+                            "id": "COLOR",
+                            "name": "Color",
+                            "value_id": "51998",
+                            "value_name": "Bordó",
+                            "value_struct": null,
+                            "values": [
+                                {
+                                    "id": "51998",
+                                    "name": "Bordó",
+                                    "struct": null
+                                }
+                            ]
+                        }
+                    ],
+                    "available_quantity": 1,
+                    "sold_quantity": 25,
+                    "sale_terms": [],
+                    "picture_ids": [
+                        "859022-MLC47220873637_082021",
+                        "956448-MLC47220979231_082021",
+                        "760887-MLC47220846760_082021"
+                    ],
+                    "catalog_product_id": null
+                }
+            ],
+            "status": "active",
+            "sub_status": [],
+            "tags": [
+                "good_quality_picture",
+                "good_quality_thumbnail",
+                "loyalty_discount_eligible",
+                "immediate_payment",
+                "cart_eligible"
+            ],
+            "warranty": "Garantía del vendedor: 1 meses",
+            "catalog_product_id": null,
+            "domain_id": "MLC-LIPSTICKS",
+            "parent_item_id": null,
+            "differential_pricing": null,
+            "deal_ids": [],
+            "automatic_relist": false,
+            "date_created": "2021-08-24T20:30:43.000Z",
+            "last_updated": "2022-03-25T14:27:41.000Z",
+            "health": 0.9,
+            "catalog_listing": false,
+            "channels": [
+                "marketplace"
+            ]
+        }
+    }
+]

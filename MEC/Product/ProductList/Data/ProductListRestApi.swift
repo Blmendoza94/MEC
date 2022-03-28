@@ -1,6 +1,10 @@
 import RxSwift
 
-class ProductListRestApi: BaseApiRest<ProductInformation>, ProductListRepository {
+class ProductListRestApi: BaseRestApi<ProductInformation>, ProductListRepository {
+    override init(session: NetworkSession = URLSession.shared) {
+        super.init(session: session)
+    }
+
     func getProductList(_ searchText: String) -> Observable<ProductInformation> {
         typealias Subdomain = NetworkingConstants.Subdomain
 
@@ -14,6 +18,9 @@ class ProductListRestApi: BaseApiRest<ProductInformation>, ProductListRepository
         var urlComponents = URLComponents(string: stringURL) ?? URLComponents()
         urlComponents.queryItems = queryItems
 
-        return get(urlComponents.url ?? URL(fileURLWithPath: .empty))
+        var request = URLRequest(url: urlComponents.url ?? URL(fileURLWithPath: .empty))
+        request.httpMethod = NetworkingConstants.Method.get
+
+        return execute(request)
     }
 }

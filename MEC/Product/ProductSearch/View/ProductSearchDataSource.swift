@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-class SearchProductDataSource: NSObject {
-    weak var view: SearchProductView?
+class ProductSearchDataSource: NSObject {
+    weak var view: ProductSearchView?
 
-    func attach(_ view: SearchProductView) {
+    func attach(_ view: ProductSearchView) {
         self.view = view
     }
 
@@ -26,9 +26,9 @@ class SearchProductDataSource: NSObject {
     }
 }
 
-extension SearchProductDataSource: UITableViewDataSource {
+extension ProductSearchDataSource: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return SearchProductCellType.types.count
+        return ProductSearchCellType.types.count
     }
 
     func tableView(

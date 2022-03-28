@@ -88,7 +88,7 @@ class ProductListViewController: BaseViewController {
             title: ProductConstants.Error.secondaryActionTitle,
             style: .default
         ) { [weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
+            self?.productListViewModel?.closeView()
         }
 
         showGenericError(

@@ -1,9 +1,15 @@
 import RxSwift
 
-class ProductListViewModel {
-    private let repository = ProductListRestApi()
+class ProductListViewModel: BaseViewModel {
+    private let repository: ProductListRepository
 
-    var coordinator: ProductCoordinator?
+    private var productCoordinator: ProductCoordinator? {
+        return coordinator as? ProductCoordinator
+    }
+
+    init(repository: ProductListRepository) {
+        self.repository = repository
+    }
 }
 
 extension ProductListViewModel: ProductListViewModelProtocol {
@@ -27,6 +33,10 @@ extension ProductListViewModel: ProductListViewModelProtocol {
     }
 
     func showProductDetail(_ productId: String) {
-        coordinator?.goToProductDetail(productId)
+        productCoordinator?.goToProductDetail(productId)
+    }
+
+    func closeView() {
+        coordinator?.close()
     }
 }

@@ -3,6 +3,7 @@ import UIKit
 class ProductFlowCoordinator {
     var parentCoordinator: Coordinator?
     var children: [Coordinator]?
+
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -12,16 +13,17 @@ class ProductFlowCoordinator {
 
 extension ProductFlowCoordinator: ProductCoordinator {
     func show() {
-        let viewModel = SearchProductViewModel()
+        let viewModel = ProductSearchViewModel()
 
         viewModel.coordinator = self
-        let searchProductViewController = SearchProductViewController(viewModel: viewModel)
+        let searchProductViewController = ProductSearchViewController(viewModel: viewModel)
 
         navigationController.pushViewController(searchProductViewController, animated: true)
     }
 
     func goToProductList(_ searchText: String) {
-        let viewModel = ProductListViewModel()
+        let repository = ProductListRestApi()
+        let viewModel = ProductListViewModel(repository: repository)
 
         viewModel.coordinator = self
 
@@ -32,7 +34,8 @@ extension ProductFlowCoordinator: ProductCoordinator {
     }
 
     func goToProductDetail(_ productId: String) {
-        let viewModel = ProductDetailViewModel()
+        let repository = ProductDetailRestApi()
+        let viewModel = ProductDetailViewModel(repository: repository)
 
         viewModel.coordinator = self
 
@@ -40,5 +43,9 @@ extension ProductFlowCoordinator: ProductCoordinator {
         productDetailViewController.productId = productId
 
         navigationController.pushViewController(productDetailViewController, animated: true)
+    }
+
+    func close() {
+        navigationController.popViewController(animated: true)
     }
 }

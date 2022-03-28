@@ -1,8 +1,15 @@
 import RxSwift
 
-class ProductDetailViewModel {
-    private let repository = ProductDetailRestApi()
-    var coordinator: ProductCoordinator?
+class ProductDetailViewModel: BaseViewModel {
+    private var repository: ProductDetailRepository
+
+    private var productCoordinator: ProductCoordinator? {
+        return coordinator as? ProductCoordinator
+    }
+
+    init(repository: ProductDetailRepository) {
+        self.repository = repository
+    }
 }
 
 extension ProductDetailViewModel: ProductDetailViewModelProtocol {
@@ -21,5 +28,9 @@ extension ProductDetailViewModel: ProductDetailViewModelProtocol {
                 observer.onError(error)
             }
         }
+    }
+
+    func closeView() {
+        productCoordinator?.close()
     }
 }

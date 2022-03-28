@@ -6,7 +6,6 @@ def common_pods
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
   pod 'RxSwift'
-  pod 'RxCocoa'
   pod 'Kingfisher'
 end
 

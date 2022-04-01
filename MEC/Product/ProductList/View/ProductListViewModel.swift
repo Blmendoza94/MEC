@@ -14,7 +14,7 @@ class ProductListViewModel: BaseViewModel {
 
 extension ProductListViewModel: ProductListViewModelProtocol {
     func getProductList(_ searchText: String) -> Observable<[ProductViewData]?> {
-        return Observable.create { observer in
+        return Observable.create { [unowned self] observer in
             self.repository.getProductList(searchText)
                 .subscribe { productInformation in
                     let viewDataList = productInformation.results?.map { product in

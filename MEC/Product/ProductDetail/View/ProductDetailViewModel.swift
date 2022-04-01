@@ -14,7 +14,7 @@ class ProductDetailViewModel: BaseViewModel {
 
 extension ProductDetailViewModel: ProductDetailViewModelProtocol {
     func getProductDetail(_ productId: String) -> Observable<ProductDetailViewData?> {
-        return Observable.create { observer in
+        return Observable.create { [unowned self] observer in
             self.repository.getProductDetail(productId).subscribe { detailList in
                 let productDetail = detailList.first?.body
                 let viewData = ProductDetailViewData(
